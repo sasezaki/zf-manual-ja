@@ -5,7 +5,7 @@
     <title>Previous Exceptions</title>
 
     <para>
-        Zend Framework 1.1から、<classname>Zend_Exception</classname> は PHP 5.3がサポートする
+        Zend Framework 1.10から、<classname>Zend_Exception</classname> は PHP 5.3がサポートする
         previous exceptions(前の例外)を実装しています。単に置くだけで、 <methodname>catch</methodname> 
         節に、元の例外を参照する新しい例外を投げることができ、デバッグの際の追加コンテキスト
         の提供を助けます。Zend Framework にてこのサポートを提供することによって、あなたのコードは
