@@ -5,12 +5,12 @@
     <title>Using Zend_Tool On The Command Line</title>
 
     <para>
-        （内部的にコンソール・ツールとして知られる）<acronym>CLI</acronym>またはコマンドライン・ツールは、
-        現在、<classname>Zend_Tool</classname>リクエストをディスパッチするための主要なインターフェースです。
-        <acronym>CLI</acronym>ツールで、開発者は「コマンド・ライン・ウインドウ」内でツーリング・リクエストを出すことができます。
+        （内部的にコンソール・ツールとして知られる）<acronym>CLI</acronym> またはコマンドライン・ツールは、
+        現在、<classname>Zend_Tool</classname> リクエストをディスパッチするための主要なインターフェースです。
+        <acronym>CLI</acronym> ツールで、開発者は「コマンド・ライン・ウインドウ」内でツーリング・リクエストを出すことができます。
         それは、「ターミナルの」ウインドウとしても一般に知られています。
         この環境は、*nix環境で優れていますが、
-        Windowsでの<filename>cmd.exe</filename>やconsole2、更にはCygwinプロジェクトとも共通の実装を持ちます。
+        Windowsでの <filename>cmd.exe</filename> やconsole2、更にはCygwinプロジェクトとも共通の実装を持ちます。
     </para>
 
     <!--
@@ -20,26 +20,25 @@
     -->
 
     <sect2 id="zend.tool.usage.cli.installation">
-        <title>Installation</title>
+        <title>インストール</title>
 
         <sect3 id="zend.tool.usage.cli.installation.download-and-go">
-            <title>Download And Go</title>
+            <title>ダウンロードと実行</title>
 
             <para>
-                First download Zend Framework.  This can be done by going to framework.zend.com
-                and downloading the latest release.  After you've downloaded the package and placed
-                it on your system.  The next step is to make the zf command available to your system.
-                The easiest way to do this, is to copy the proper files from the bin/ directory
-                of the download, and place these files within the <emphasis>same</emphasis> directory
-                as the location of the php cli binary.
+                最初の Zend Framework をダウンロード。framework.zend.comに行き、最新のリリースをダウンロード
+                できます。パッケージをダウンロード後、あなたのシステムに設置します。
+                次のステップはzfコマンドをあなたのシステムにて利用可能にすることです。
+                これを行う簡単な方法は、ダウンロードしたものの bin/
+                ディレクトリーの適切なファイルをコピーし、 php cli バイナリーと<emphasis>同じ</emphasis>
+                ディレクトリーの場所内に設置することです。
             </para>
-
 
 
         </sect3>
 
         <sect3 id="zend.tool.usage.cli.installation.pear">
-            <title>Installing Via Pear</title>
+            <title>Pear経由のインストール</title>
 
             <para>
                 To install via PEAR, you must use the 3rd party zfcampus.org site to retrieve the
@@ -64,7 +63,7 @@ pear install zfcampus/zf
         </sect3>
 
         <sect3 id="zend.tool.usage.cli.installation.install-by-hand">
-            <title>Installing by Hand</title>
+            <title>手動でのインストール</title>
 
             <para>
                 Installing by hand refers to the process of forcing the zf.php and Zend Framework
@@ -94,10 +93,10 @@ pear install zfcampus/zf
     </sect2>
 
     <sect2 id="zend.tool.usage.cli.general-purpose-commands">
-        <title>General Purpose Commands</title>
+        <title>汎用のコマンド</title>
 
         <sect3 id="zend.tool.usage.cli.general-purpose-commands.version">
-            <title>Version</title>
+            <title>バージョン</title>
 
             <para>
                 This will show the current version number of the copy of Zend Framework the zf.php tool is using.
