@@ -11,7 +11,7 @@
     </para>
 
     <example id="zend.serializer.introduction.example.dynamic">
-        <title>Using Zend_Serializer dynamic interface</title>
+        <title>Zend_Serializer の動的なインターフェイスの使用</title>
 
         <para>
             シリアライザーをインスタンス化するにはアダプター名に基づいたファクトリーメソッド
@@ -81,13 +81,13 @@ try {
     </para>
 
     <example id="zend.serializer.introduction.example.static.php">
-        <title>Using the Zend_Serializer static interface</title>
+        <title>Zend_Serializer の静的なインターフェイスの使用</title>
 
         <para>
-            You can register a specific serializer adapter as a default serialization adapter for
-            use with <classname>Zend_Serializer</classname>. By default, the
-            <classname>PhpSerialize</classname> adapter will be registered, but you can change this
-            option using the <methodname>setDefaultAdapter()</methodname> static method.
+            <classname>Zend_Serializer</classname>とともに使用するのに特別なシリアライザーを標準のシリアル化
+            アダプターとして登録できます。デフォルトでは <classname>PhpSerialize</classname> アダプターが
+            登録されているでしょうが、静的メソッド <methodname>setDefaultAdapter()</methodname>
+            を使用してこのオプションを変更できます。
         </para>
 
         <programlisting language="php"><![CDATA[
