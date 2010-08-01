@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Reviewed: no -->
-<!-- EN-Revision: 20876 -->
+<!-- EN-Revision: 22743 -->
 <appendix id="doc-standard">
     <title>Zend Framework ドキュメント標準</title>
 
@@ -595,10 +595,9 @@ $render = "xxx";
             <title>イメージを使ってください</title>
 
             <para>
-                Good images and diagrams can improve readability and comprehension. Use them
-                whenever they will assist in these goals. Images should be placed in the
-                <filename>documentation/manual/en/figures/</filename> directory, and be named after
-                the section identifier in which they occur.
+                良い画像と図表は可読性と理解をもたらせます。ゴールを助けるときにはそれらを
+                使用しなさい。画像は <filename>documentation/manual/en/figures/</filename> ディレクトリに、
+                設置しなければならず、それらが存在する節の識別子の後ろに命名しなければなりません。
             </para>
         </sect2>
 
@@ -606,14 +605,14 @@ $render = "xxx";
             <title>ケースの例を使ってください</title>
 
             <para>
-                Look for good use cases submitted by the community, especially those posted in
-                proposal comments or on one of the mailing lists. Examples often illustrate usage
-                far better than the narrative does.
+                コミュニティーにて提案される良いケースを探します。特にプロポーザルでのコメントや
+                メーリングリストの一つにポストされているものです。しばしばイラストレートの使用法は
+                話しあうようにも良いものです。
             </para>
 
             <para>
-                When writing your examples for inclusion in the manual, follow
-                all coding standards and documentation standards.
+                マニュアル内に含める用例を記述する際には、標準コーディング規約と
+                ドキュメント標準の全てに沿ってください。
             </para>
         </sect2>
 
@@ -627,6 +626,12 @@ $render = "xxx";
                 at this time, we would like the documentation teams to focus on translating the
                 English manual, not the phpdoc comments.
             </para>
+            <!--
+            <para>
+             マニュアルはエンドユーザへのリファレンスガイドとなるのを意図しています。
+             コンポーネントとクラスでの内部使用のためにphpdoc文書の内容を繰り返すことは求められず、
+            </para>
+            -->
         </sect2>
 
         <sect2 id="doc-standard.recommendations.links">
@@ -638,18 +643,11 @@ $render = "xxx";
             </para>
 
             <para>
-                マニュアルの他のセクションへのリンクを
-                <emphasis>&lt;xref&gt;</emphasis>タグ（セクションのタイトルをリンク・テキストの代わりにします）
-                または<emphasis>&lt;link&gt;</emphasis>タグ（リンクのテキストを用意しなければいけません）
-                のどちらかを使って実施できるでしょう。
+                マニュアルの他のセクションへのリンクを <emphasis>&lt;link&gt;</emphasis> 
+                タグ（リンクのテキストを用意しなければいけません）を使って実施できるでしょう。
             </para>
 
             <programlisting language="xml"><![CDATA[
-<para>
-    "Xref" links to a section: <xref
-        linkend="doc-standard.recommendations.links" />.
-</para>
-
 <para>
     "Link" links to a section, using descriptive text: <link
         linkend="doc-standard.recommendations.links">documentation on
