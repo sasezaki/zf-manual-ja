@@ -136,7 +136,7 @@ zf ? controller
 ]]></programlisting>
 
             <para>
-                The above means "show me all 'actions' for the provider 'controller'"; while the following:
+                上記は"'controller' プロパイダーのアクションにおけるアクション全てを表示せよ"という意味です; 一方次は:
             </para>
 
             <programlisting language="text"><![CDATA[
