@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Reviewed: no -->
-<!-- EN-Revision: 21818 -->
+<!-- EN-Revision: 22743 -->
 <sect1 id="zend.serializer.adapter">
     <title>Zend_Serializer_Adapter</title>
 
     <para>
-        <classname>Zend_Serializer</classname> アダプターは少しの取り組みでシリアルかメソッドの
+        <classname>Zend_Serializer</classname> アダプターは少しの取り組みでシリアル化メソッドの
         違いの架け橋を作成します。
     </para>
 
@@ -83,7 +83,7 @@
         </para>
 
         <para>
-            Available options include:
+            使用可能なオプションとして含まれているのは:
         </para>
 
         <table id="zend.serializer.adapter.wddx.table.options">
@@ -105,6 +105,7 @@
                           <entry><type>string</type></entry>
                           <entry></entry>
                           <entry>An optional comment that appears in the packet header.</entry>
+                          <entry>パケットヘッダー内に表されるオプションコメント</entry>
                       </row>
                   </tbody>
              </tgroup>
@@ -144,21 +145,27 @@
                           <entry><emphasis>cycleCheck</emphasis></entry>
                           <entry><type>boolean</type></entry>
                           <entry>false</entry>
-                          <entry>See <xref linkend="zend.json.advanced.objects1"/></entry>
+                          <entry>
+                            <link linkend="zend.json.advanced.objects1">このセクション</link> 参照
+                          </entry>
                       </row>
 
                       <row>
                           <entry><emphasis>objectDecodeType</emphasis></entry>
                           <entry><type>Zend_Json::TYPE_*</type></entry>
                           <entry>Zend_Json::TYPE_ARRAY</entry>
-                          <entry>See <xref linkend= "zend.json.advanced.objects1"/></entry>
+                          <entry>
+                             <link linkend= "zend.json.advanced.objects1">このセクション</link> 参照
+                          </entry>
                       </row>
 
                       <row>
                           <entry><emphasis>enableJsonExprFinder</emphasis></entry>
                           <entry><type>boolean</type></entry>
                           <entry>false</entry>
-                          <entry>See <xref linkend= "zend.json.advanced.expr"/></entry>
+                          <entry>
+                            <link linkend= "zend.json.advanced.expr">このセクション</link> 参照
+                          </entry>
                       </row>
                   </tbody>
              </tgroup>
