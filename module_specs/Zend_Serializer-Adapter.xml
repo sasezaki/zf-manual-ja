@@ -18,7 +18,7 @@
     </para>
 
     <para>
-        Below is a list of available adapters.
+        下記は利用可能なアダプターのリストです。
     </para>
 
     <sect2 id="zend.serializer.adapter.phpserialize">
@@ -66,12 +66,21 @@
             is a programming-language-, platform-, and transport-neutral data interchange mechanism
             for passing data between different environments and different computers.
         </para>
-
+        <para>
+            <ulink url="http://wikipedia.org/wiki/WDDX">WDDX</ulink> (Web Distributed Data eXchange)
+            はプログラミング言語で、プラットフォームで、異なる環境や異なるコンピュータ間
+            で渡されるデータの内部変換メカニズムでの転送用中立データです。
         <para>
             The adapter simply uses the <ulink
                 url="http://php.net/manual/book.wddx.php">wddx_*()</ulink> <acronym>PHP</acronym>
             functions. Please read the <acronym>PHP</acronym> manual to determine how you may enable
             them in your <acronym>PHP</acronym> installation.
+        </para>
+        <para>
+            アダプターは単に <acronym>PHP</acronym> 関数の <ulink
+                url="http://php.net/manual/book.wddx.php">wddx_*()</ulink> を使用します。
+            これらをあなたの <acronym>PHP</acronym> 環境にて可能にするには
+            <acronym>PHP</acronym> マニュアルをお読み下さい。
         </para>
 
         <para>
@@ -80,7 +89,19 @@
             <acronym>PHP</acronym> extension is used to check if a returned
             <constant>NULL</constant> value from <methodname>wddx_unserialize()</methodname> is
             based on a serialized <constant>NULL</constant> or on invalid data.
+           </para>
+           <!--
+        <para>
+            加えて, <acronym>PHP</acronym> 拡張モジュール <ulink
+                url="http://php.net/manual/book.simplexml.php">SimpleXML</ulink>
+            が <methodname>wddx_unserialize()</methodname>からの値が <constant>NULL</constant> を
+            返却すると設定されていた場合、
+            <constant>NULL</constant> 値のシリアル化されたものか不当なデータに基づいてます。
+             
+            <constant>NULL</constant> value from <methodname>wddx_unserialize()</methodname> is
+            based on a serialized <constant>NULL</constant> or on invalid data.
         </para>
+        -->
 
         <para>
             使用可能なオプションとして含まれているのは:
@@ -91,20 +112,19 @@
 
             <tgroup cols="4">
                  <thead>
-                      <row>
-                          <entry>Option</entry>
-                          <entry>Data Type</entry>
-                          <entry>Default Value</entry>
-                          <entry>Description</entry>
+                    <row>
+                          <entry>オプション</entry>
+                          <entry>データ方</entry>
+                          <entry>デフォルト値</entry>
+                          <entry>詳細</entry>
                     </row>
                  </thead>
 
                  <tbody>
                       <row>
-                          <entry><emphasis>comment</emphasis></entry>
-                          <entry><type>string</type></entry>
+                          <entry><emphasis>コメント</emphasis></entry>
+                          <entry><type>文字列</type></entry>
                           <entry></entry>
-                          <entry>An optional comment that appears in the packet header.</entry>
                           <entry>パケットヘッダー内に表されるオプションコメント</entry>
                       </row>
                   </tbody>
@@ -176,15 +196,15 @@
         <title>Zend_Serializer_Adapter_Amf 0 and 3</title>
 
         <para>
-            The <acronym>AMF</acronym> adapters, <classname>Zend_Serializer_Adapter_Amf0</classname>
-            and <classname>Zend_Serializer_Adapter_Amf3</classname>, provide a bridge to the
-            serializer of the <classname>Zend_Amf</classname> component. Please read the <link
-                linkend= "zend.amf.introduction">Zend_Amf documentation</link> for further
-            information.
+            <acronym>AMF</acronym> アダプター <classname>Zend_Serializer_Adapter_Amf0</classname>
+            と <classname>Zend_Serializer_Adapter_Amf3</classname>は、<classname>Zend_Amf</classname> コンポーネント
+            のシリアライザーとの架け橋を提供します。より詳しくは <link
+                linkend= "zend.amf.introduction">Zend_Amf ドキュメント</link> を
+            をお読みください。
         </para>
 
         <para>
-            There are no options for these adapters.
+            これらのアダプターにはオプションはありません。
         </para>
     </sect2>
 
@@ -384,29 +404,30 @@
         </para>
 
         <para>
-            There are no configuration options for this adapter.
+            このアダプターには設定オプションはありません。
         </para>
 
         <warning>
-            <title>Unserializing objects</title>
+            <title>オブジェクトのアンシリアライズ</title>
 
             <para>
-                Objects will be serialized using the <ulink
+                オブジェクトは <ulink
                     url="http://php.net/manual/language.oop5.magic.php#language.oop5.magic.set-state">__set_state</ulink>
-                magic method. If the class doesn't implement this method, a fatal error will occur
-                during execution.
+                マジックメソッドを使用してシリアル化されるでしょう。もしクラスがこのメソッドを実装してない場合、 
+                致命的なエラー (fatal error) が実行時に発生するでしょう。
             </para>
+        </warning>
         </warning>
 
         <warning>
-            <title>Uses eval()</title>
+            <title>eval() の使用</title>
 
             <para>
-                The <classname>PhpCode</classname> adapter utilizes <methodname>eval()</methodname>
-                to unserialize. This introduces both a performance and potential security issue as a
-                new process will be executed. Typically, you should use the
-                <methodname>PhpSerialize</methodname> adapter unless you require human-readability
-                of the serialized data.
+                <classname>PhpCode</classname> アダプターはアンシリアライズするために 
+                <methodname>eval()</methodname>
+                を利用します。これはパフォーマンスと新しいプロセスが実行される潜在的なセキュリティー問題
+                を取り込みます。典型的に、シリアル化されたデータへの人への可読性に関わらず
+                <methodname>PhpSerialize</methodname> アダプターを使用すべきです。
             </para>
         </warning>
     </sect2>
